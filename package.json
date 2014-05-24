@@ -1,6 +1,6 @@
 {
   "name": "buffer24",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "node buffer extension: support 24bit operators",
   "main": "index.js",
   "scripts": {
