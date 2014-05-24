@@ -43,7 +43,7 @@ Buffer.prototype.writeUInt24LE = function(value, offset, noAssert) {
   value = +value;
   offset = offset >>> 0;
   if (!noAssert)
-    checkInt(this, value, offset, 3, 0xffffffff, 0);
+    checkInt(this, value, offset, 3, 0xffffff, 0);
   this[offset] = value;
   this[offset + 1] = (value >>> 8);
   this[offset + 2] = (value >>> 16);
@@ -54,7 +54,7 @@ Buffer.prototype.writeUInt24BE = function(value, offset, noAssert) {
   value = +value;
   offset = offset >>> 0;
   if (!noAssert)
-    checkInt(this, value, offset, 3, 0xffffffff, 0);
+    checkInt(this, value, offset, 3, 0xffffff, 0);
   this[offset] = (value >>> 16);
   this[offset + 1] = (value >>> 8);
   this[offset + 2] = value;
@@ -65,7 +65,7 @@ Buffer.prototype.writeInt24LE = function(value, offset, noAssert) {
   value = +value;
   offset = offset >>> 0;
   if (!noAssert)
-    checkInt(this, value, offset, 3, 0x7fffffff, -0x80000000);
+    checkInt(this, value, offset, 3, 0x7fffff, -0x800000);
   this[offset] = value;
   this[offset + 1] = (value >>> 8);
   this[offset + 2] = (value >>> 16);
@@ -76,7 +76,7 @@ Buffer.prototype.writeInt24BE = function(value, offset, noAssert) {
   value = +value;
   offset = offset >>> 0;
   if (!noAssert)
-    checkInt(this, value, offset, 3, 0x7fffffff, -0x80000000);
+    checkInt(this, value, offset, 3, 0x7fffff, -0x800000);
   this[offset] = (value >>> 16);
   this[offset + 1] = (value >>> 8);
   this[offset + 2] = value;
